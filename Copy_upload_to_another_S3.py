@@ -1,4 +1,4 @@
-from __future__ import print_function
+#from __future__ import print_function
 
 import json
 import boto3
@@ -23,5 +23,5 @@ def lambda_handler(event,context):
 		s3.copy_object(Bucket=target_bucket, Key=key,CopySource= copy_source)
 	except Exception as e:
 		print(e)
-		print(“Error getting object {} from bucket {}. Make sure tehy exists in the bucket”)
+		print(“Error getting object {} from bucket {}. Make sure they exist in the bucket”)
 		raise e
